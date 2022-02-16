@@ -4,6 +4,8 @@ use App\Http\Controllers\API\BookController;
 use App\Http\Controllers\API\UserController;
 use App\Http\Controllers\API\LocationController;
 use App\Http\Controllers\API\FileController;
+use App\Http\Controllers\API\DocumentController;
+
 
 
 use Illuminate\Support\Facades\Route;
@@ -27,7 +29,9 @@ Route::group(['prefix' => 'books', 'middleware' => 'auth:sanctum'], function () 
 
 Route::get('/locations', [LocationController::class, 'index'])->middleware('auth:sanctum');
 
-Route::post('/fileupload', [FileController::class, 'upload']);
+Route::post('fileupload', [FileController::class, 'upload'])->middleware('auth:sanctum');
+// Route::post('/fileupload', 'Api\FileController@upload');
 
 
 
+// Route::post('/register', 'Api\RegisterController@register');

@@ -12,6 +12,7 @@
                     <router-link to="/dashboard" class="nav-item nav-link">Dashboard</router-link>
                     <router-link to="/books" class="nav-item nav-link">Books</router-link>
                     <router-link to="/locations" class="nav-item nav-link">Locaitons</router-link>
+                    <router-link to="/fileupload" class="nav-item nav-link">Fileupload</router-link>
 
 
 
@@ -25,7 +26,7 @@
                     <router-link to="/register" class="nav-item nav-link">Register
                     </router-link>
                     <router-link to="/about" class="nav-item nav-link">About</router-link>
-                    <router-link to="/fileupload" class="nav-item nav-link">Fileupload</router-link>
+                    <!-- <router-link to="/fileupload" class="nav-item nav-link">Fileupload</router-link> -->
 
                 </div>
             </div>

@@ -6,6 +6,8 @@ import axios from 'axios'
 import router from './router'
 import { createStore } from 'vuex'
 
+
+
 // Create a new store instance.
 const store = createStore({
   state () {

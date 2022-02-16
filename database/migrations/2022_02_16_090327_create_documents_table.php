@@ -1,8 +1,10 @@
 <?php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-class CreateFileUploadsTable extends Migration
+
+class CreateDocumentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -11,13 +13,14 @@ class CreateFileUploadsTable extends Migration
      */
     public function up()
     {
-        Schema::create('file_uploads', function (Blueprint $table) {
-            $table->id();
-            $table->string('name')->nullable();
-            $table->string('path')->nullable();            
+        Schema::create('documents', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('title');
+            $table->integer('user_id');
             $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      *
@@ -25,6 +28,6 @@ class CreateFileUploadsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('file_uploads');
+        Schema::dropIfExists('documents');
     }
 }
